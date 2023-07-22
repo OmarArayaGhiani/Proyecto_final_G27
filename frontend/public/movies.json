@@ -1,0 +1,50 @@
+[
+  {
+    "id": "P001",
+    "name": "Pelicula 1",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Horror",
+    "price": 5950
+  },
+  {
+    "id": "P002",
+    "name": "Pelicula 2",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Ficcion",
+    "price": 7250
+  },
+  {
+    "id": "P003",
+    "name": "Pelicula 3",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Comedia",
+    "price": 5990
+  },
+  {
+    "id": "P004",
+    "name": "Pelicula 4",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Suspenso",
+    "price": 9590
+  },
+  {
+    "id": "P005",
+    "name": "Pelicula 5",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Animada",
+    "price": 6450
+  },
+  {
+    "id": "P006",
+    "name": "Pelicula 6",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "img": "https://www.piubellamodels.com/wp-content/uploads/2019/02/film-375x250.jpg",
+    "genre": "Artes marciales",
+    "price": 8500
+  }
+]

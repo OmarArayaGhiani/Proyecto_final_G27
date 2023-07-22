@@ -1,3 +1,17 @@
+.navlink{
+    color: black;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    font-weight: bolder;
+}
+
+.active {
+    font-weight: bolder;
+    color: black;
+}
+
 .icon {
     font-size: 25px;
     margin-right: 4px;
