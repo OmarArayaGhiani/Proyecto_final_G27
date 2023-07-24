@@ -1,3 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.btn-icon{
+    margin-left: 6px;
+    font-size: 20px;
+}
+
+.btn-flex{
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
 p {
     margin: 0px;
 }

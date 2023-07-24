@@ -1,0 +1,100 @@
+.carrito {
+    width: 60%;
+    margin: 50px auto;
+    background-color: whitesmoke;
+}
+
+.carrito h3 {
+    padding: 20px 40px;
+}
+
+.carrito .items {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.carrito .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.carrito p {
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+.carrito img {
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+}
+
+.price-section p {
+    margin-left: 20px;
+}
+
+.add-remove {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.carrito .buy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.carrito .total-price {
+    margin: 10px;
+}
+
+.carrito .buy-btn {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.carrito-vacio{
+    width: 60%;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+}
+
+.link-carrito-vacio{
+    color: brown;
+    text-decoration: none;
+}
+
+.link-carrito-vacio:hover{
+    color: rgb(228, 18, 18);
+}
+
+@media(max-width: 768px) {
+    .carrito {
+        width: 80%;
+    }
+
+    .carrito .item {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .carrito .price-section{
+        margin-top: 15px;
+    }
+}
