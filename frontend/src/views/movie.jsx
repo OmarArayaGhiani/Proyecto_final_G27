@@ -1,6 +1,6 @@
 import CardDetails from "../components/card_details"
 
-const Pizza = () => {
+const Movie = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const Pizza = () => {
   )
 }
 
-export default Pizza
+export default Movie
