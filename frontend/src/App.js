@@ -2,6 +2,9 @@ import MyNavbar from "./components/navbar"
 import Home from "./views/home"
 import Movie from "./views/movie"
 import Carrito from "./views/carrito"
+import MyPerfil from "./views/perfil"
+import Login from "./views/login"
+import Registro from "./views/registro"
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import {useState, useEffect} from "react"
@@ -82,6 +85,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/:selectedMovie" element={<Movie />} />
             <Route path="/carrito" element={<Carrito />} />
+            <Route path="/login" element={<Login />} />  
+            <Route path="/registro" element={<Registro />} />          
+            <Route path="/perfil" element={<MyPerfil />} />
           </Routes>
         </BrowserRouter>
       </MyContext.Provider>
