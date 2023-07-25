@@ -1,0 +1,11 @@
+.section {
+    height: 500px;
+}
+
+.customSection {
+    display: none;
+}
+
+.customBtn:hover {
+    cursor: pointer;
+}
