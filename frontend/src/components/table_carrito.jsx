@@ -5,9 +5,15 @@ import {Button} from "react-bootstrap"
 import {useContext} from "react"
 import {Link} from "react-router-dom"
 import MyContext from "../MyContext"
+import { useNavigate } from "react-router-dom"
 
 const TableCarrito = () => {
   const {carrito, price, movieAdd, movieRemove} = useContext(MyContext)
+  const navigate = useNavigate()
+
+  const historialCompra = async () => {
+    navigate("/perfil?nav=historial",{state:{section:"historial"}})
+  }
 
   if (price > 0)
     return (
@@ -15,7 +21,6 @@ const TableCarrito = () => {
         <h3>Detalles del pedido:</h3>
         <div className="items">
           {carrito.map((element, index) => {
-            if (element.cantidad > 0)
               return (
                 <div key={index}>
                   <div className="item">
@@ -28,12 +33,12 @@ const TableCarrito = () => {
                       <div className="me-3">
                         <p className="text-end">
                           Valor unitario
-                          <span className="ms-2">${element.price}</span>
+                          <span className="ms-2">${element.price.toLocaleString('es-CL')}</span>
                         </p>
                         <p className="text-end">
                           Total unitario:
                           <span className="ms-2">
-                            ${element.cantidad * element.price}
+                            ${(element.cantidad * element.price).toLocaleString('es-CL')}
                           </span>
                         </p>
                       </div>
@@ -58,9 +63,9 @@ const TableCarrito = () => {
           })}
           <div className="buy">
             <p className="total-price">
-              Total: $<span>{price}</span>
+              Total: $<span>{price.toLocaleString('es-CL')}</span>
             </p>
-            <Button variant="success" className="buy-btn">
+            <Button onClick={historialCompra} variant="success" className="buy-btn">
               Pagar
             </Button>
           </div>
@@ -70,6 +75,7 @@ const TableCarrito = () => {
   else
     return (
       <div className="carrito-vacio">
+        
         <h3>El carrito está vacío</h3>
         <p>
           ¡Haz click{" "}
