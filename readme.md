@@ -2,7 +2,7 @@ Codigo para desafio_latam
 
 Proyecto final de curso.
 
-Grupo.
+Grupo 3
 
 Sergio Araya
 Clauida Leiva

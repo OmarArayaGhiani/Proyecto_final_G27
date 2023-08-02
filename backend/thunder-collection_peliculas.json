@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "peliculas",
+    "dateExported": "2023-08-02T21:06:58.091Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e974cdb5-f812-428e-bf3c-212c0ed3268a",
+            "colId": "75b596fa-ad35-4df9-8541-5be8863e785e",
+            "containerId": "",
+            "name": "localhost:5000/peliculas/4",
+            "url": "localhost:5000/peliculas/4",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-02T21:06:26.988Z",
+            "modified": "2023-08-02T21:06:26.988Z",
+            "headers": []
+        },
+        {
+            "_id": "1348a9ac-e33d-484f-83ac-a3a5f95c2b72",
+            "colId": "75b596fa-ad35-4df9-8541-5be8863e785e",
+            "containerId": "",
+            "name": "localhost:5000/registro",
+            "url": "localhost:5000/registro",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-08-02T21:06:32.855Z",
+            "modified": "2023-08-02T21:06:32.855Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\": \"correo@gmail.com\",\n  \"password\": \"12345\",\n  \"nombre\": \"Cliente 1\",\n  \"direccion\": \"Dirección 12345\",\n  \"fono\": \"912345678\"\n}"
+            }
+        },
+        {
+            "_id": "807337ba-456c-4dd2-9cca-828fcbabdd58",
+            "colId": "75b596fa-ad35-4df9-8541-5be8863e785e",
+            "containerId": "",
+            "name": "localhost:5000/peliculas?order_by=titulo_asc,precio_desc",
+            "url": "localhost:5000/peliculas?order_by=titulo_asc,precio_desc",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-08-02T21:06:40.972Z",
+            "modified": "2023-08-02T21:06:40.972Z",
+            "headers": []
+        },
+        {
+            "_id": "5c411b19-3726-402e-9196-adcf0c68c43d",
+            "colId": "75b596fa-ad35-4df9-8541-5be8863e785e",
+            "containerId": "",
+            "name": "localhost:5000/login",
+            "url": "localhost:5000/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-08-02T21:06:46.478Z",
+            "modified": "2023-08-02T21:06:46.478Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\": \"correo@gmail.com\",\n  \"password\": \"12345\"\n}"
+            }
+        }
+    ]
+}

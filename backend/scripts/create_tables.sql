@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS usuarios
     activo boolean DEFAULT true,
     direccion VARCHAR(200) NOT NULL,
     fono VARCHAR(20) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password VARCHAR(200) NOT NULL,
     primary key (id)
 );
 
