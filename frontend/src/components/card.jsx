@@ -45,9 +45,9 @@ const MyCard = () => {
               key={element.id}
               className="col-12 col-md-6 col-lg-4 col-xxl-3 mt-3"
             >
-              <Card style={{ width: "18rem" }} className="m-auto">
-                <div onClick={() => toSelectedMovie(element.name)}>
-                  <Card.Img variant="top" src={element.img} />
+              <Card style={{ width: "18rem", height: "42rem" }} className="m-auto">
+                <div onClick={() => toSelectedMovie(element.name)} className="card-img">
+                  <Card.Img variant="top" src={element.img} className="img"/>
                 </div>
                 <Card.Body>
                   <div onClick={() => toSelectedMovie(element.name)}>

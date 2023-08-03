@@ -14,15 +14,18 @@ function App() {
   const [movies, setMovies] = useState([])
   const [price, setPrice] = useState(0)
   const [carrito, setCarrito] = useState([])
-  const [cantidad, setCantidad] = useState(0) 
+  const [cantidad, setCantidad] = useState(0)
+  
+  const urlServer = "http://localhost:3000"
 
   useEffect(() => {
     getDataMovies()
   }, [])
 
   const getDataMovies = async () => {
-    const resDataMovies = await fetch("/movies.json")
+    const resDataMovies = await fetch(urlServer + "/peliculas")
     const dataMovies = await resDataMovies.json()
+    console.log(dataMovies)
     setMovies(dataMovies)
   }
 

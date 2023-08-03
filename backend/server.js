@@ -1,17 +1,18 @@
+require("dotenv").config()
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const dotenv = require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
+console.log(process.env.PORT)
+
 const {
-  GetMovies, GetMovie, ConvencionHATEOAS, GetCategorias, GetReparto, verificarCredenciales,
+  GetMovies, GetMovie, verificarCredenciales,
   registrarUsuario, getUsuario
 } = require("./queries");
 const { validaLogin, usuarioExiste, verificarToken, decodificarToken } = require("./middleware");
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, console.log(`Escuchando por el puerto ${PORT}`))
+app.listen(process.env.PORT, console.log(`Escuchando por el puerto ${process.env.PORT}`))
 app.use(cors());
 app.use(express.json());
 
@@ -52,8 +53,7 @@ app.get("/usuario/:correo", async (req, res) => {
 
 app.get("/peliculas", async (req, res) => {
   try {
-    const movies = await GetMovies(req.query);
-    //const conv = await ConvencionHATEOAS(movies);    
+    const movies = await GetMovies();   
     res.json(movies);
   } catch (error) {
     res.status(400).send(error.message);

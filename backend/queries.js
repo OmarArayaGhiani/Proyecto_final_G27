@@ -3,26 +3,12 @@ const bcrypt = require("bcrypt");
 const format = require("pg-format");
 
 const pool = new Pool({
-  host: process.env.HOST || "localhost",
+  host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
   allowExitOnIdle: true,
-  port: 5432,
 });
-const ErrorHttp = {
-  "Bad Request": 400,
-  NotFound: 404,
-  Unauthorized: 401,
-  InternalServerError: 500,
-};
-
-const capturaErrores = (mensaje, errorHttp) => {
-  let error = new Error();
-  error.code = errorHttp;
-  error.message = mensaje;
-  throw error;
-};
 
 const verificarCredenciales = async (email, password) => {
   try {
@@ -64,6 +50,7 @@ const registrarUsuario = async (data) => {
     //throw { code: 404,message: error.message };
   }
 };
+
 const verificarUsuario = async (email) => {
   try {
     const values = [email];
@@ -99,34 +86,10 @@ const ConvencionHATEOAS = (movies) => {
   return HATEOAS;
 };
 
-const GetMovies = async (param) => {
+const GetMovies = async () => {
   try {
-    let filtros = [];
-
-    if (param.idcategoria > 0)
-      filtros.push(`idcategoria = ${param.idcategoria}`);
-    if (param.agno > 0) filtros.push(`agno = ${param.agno}`);
-    if (param.titulo) filtros.push(`lower(titulo) like lower ('%${param.titulo}%')`);
-    if (param.director) filtros.push(`director like %${param.director}%`);
-
-    if (param.order_by === undefined) param.order_by = "titulo_asc";
-    const [order1, order2] = param.order_by.split(",");
-    const [campo, direccion] = order1.split("_");
-    const [campo2, direccion2] = order2.split("_");
-    if (param.limit === undefined) param.limit = 10;
-    if (param.page === undefined) param.page = 1;
-    const offset = (param.page - 1) * param.limit;
-    let qry =
-      "SELECT id,titulo,precio,director,agno,SUBSTRING (sinopsis,1,60) || '...' as sinopsis" +
-      " FROM peliculas p";
-    if (filtros.length > 0) {
-      filtros = filtros.join(" AND ");
-      qry += ` WHERE ${filtros}`;
-    }
-    qry += ` order by ${campo} ${direccion},${campo2} ${direccion2} OFFSET ${offset} LIMIT ${param.limit}`;
-
-    const { rows: movies } = await pool.query(qry);
-    return movies;
+    const {rows} = await pool.query('SELECT * FROM peliculas')
+    return(rows)
   } catch (error) {
     throw { code: 404, message: error.message };
   }

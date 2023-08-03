@@ -19,14 +19,16 @@ const CardDetails = () => {
           return (
             <div>
               <div key={element.id} className="details-card-flex">
-                <img src={element.img} alt="" />
+                <div className="img-details">
+                  <img src={element.img} alt="" />
+                </div>
                 <div className="m-3">
                   <div className="d-flex justify-content-between">
                     <h2>{element.name}</h2>
                     <h2>Puntuación</h2>
                   </div>
                   <hr />
-                  <p>{element.desc}</p>
+                  <p>{element.sinopsis}</p>
                   <hr />
                   <p className="fw-bold">Género</p>
                   <p>{element.genre}</p>
